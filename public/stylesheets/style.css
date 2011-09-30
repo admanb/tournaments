@@ -1,0 +1,23 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+li.selected {
+	background-color: red;
+	color: black;
+}
+
+#left-column {
+	float: left;
+	width: 300px;
+}
+
+#right-column {
+	float: right;
+	width: 300px;
+}

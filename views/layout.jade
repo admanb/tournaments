@@ -1,0 +1,19 @@
+!!!
+html
+	head
+		title welcome to tournament
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js')
+		script(type='text/javascript', src='/javascripts/json2.js')
+		script(type='text/javascript', src='/javascripts/underscore.js')
+		script(type='text/javascript', src='/javascripts/backbone.js')
+	body!= body
+		- if (typeof players !== 'undefined' && typeof tournaments !== 'undefined'  )
+			script(type='text/javascript', src='/javascripts/application.js')
+			script(type='text/javascript')
+				$(function() {
+					if (typeof Players !== 'undefined')
+						Players.reset(!{JSON.stringify(players)});
+					if (typeof Tournaments !== 'undefined')	
+						Tournaments.reset(!{JSON.stringify(tournaments)});
+				});

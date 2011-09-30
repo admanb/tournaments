@@ -1,0 +1,36 @@
+h1 welcome to tournament
+
+div#left-column
+	div#player-list
+		li#player-row-template(style='display: none')
+			a(id='player_{{ id }}') {{ last }} {{ first }}
+		
+	div#player-form
+		div
+			label First Name:
+			input.first(name='p[first]', value='')
+			br
+			label Last Name:
+			input.last(name='p[last]', value='')
+		div
+			input#player-save-button(type='submit', value='Create')
+
+div#right-column
+	div#tournament-view(style='display:none')
+		h2#title
+		p#description
+
+	div#tournament-info
+		li#tournament-row-template(style='display: none')
+			a(id='tournament_{{ id }}') {{ title }}
+	
+	div#tournament-form
+		div
+			label Title:
+			input.title(name='t[title]', value='') 
+			br
+			label Description:
+			br
+			textarea.description(name='p[description]', rows=12, value='')
+		div
+			input#tournament-save-button(type='submit', value='Create')
